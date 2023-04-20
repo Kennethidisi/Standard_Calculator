@@ -10,7 +10,8 @@ let equal_to = document.querySelector('#equal_to');
 
 let input_btns = document.querySelectorAll('.input_btn');
 input_btns.forEach((btn)=>{
-    btn.addEventListener('click', ()=>{
+    btn.addEventListener('click', (e)=>{
+        e.preventDefault()
         input_display.value += btn.value
     })
 })
