@@ -1,6 +1,9 @@
 let input_display = document.querySelector('#input_display')
 
 window.onload = ()=>{
+    setTimeout(()=>{
+        document.querySelector('.welcome_page').style.display = "none"
+    },3000)
     input_display.value = ""
 }
 
@@ -27,7 +30,7 @@ equal_to.addEventListener('click', ()=>{
         }
     }catch(err){
         console.log(err)
-        input_display.value = 'MATHEMATICAL ERROR'
+        input_display.value = 'ERROR'
         setTimeout(()=>{
             input_display.value = ''
         },2000)
