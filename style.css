@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: whitesmoke;
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: darkorange;
+    text-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+}
+
+.container{
+    width: 350px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+}
+
+.display{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input_display{
+    width: 100%;
+    padding: 30px 20px;
+    text-align: right;
+    font-size: 20px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #3B3B3B;
+}
+
+
+.buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.buttons input{
+    padding: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50%;
+    border: none;
+    background-color: #444;
+    color: white;
+    transition: background-color .3s ease;
+}
+
+.buttons input:hover{
+    background-color: #666;
+}
+
+#equal_to{
+    grid-row: span 2;
+    border-radius: 20px;
+    background-color: darkorange;
+}
+
+#zero{
+    grid-column: span 2;
+    border-radius: 40px;
+}
+
+#divide, #times, #plus, #minus{
+    background-color: darkorange;
+    transition: background-color .3s ease;
+}
+
+#divide:hover, #times:hover, #plus:hover, #minus:hover, #equal_to:hover{
+    background-color: rgb(248, 182, 58);
+}
+
+#clear, #delete{
+    background-color: #cccccca4;
+    transition: background-color .3s ease;
+}
+
+#clear:hover, #delete:hover{
+    background-color: #cccccc;
+}
+
+
+
+@media(max-width:450px){
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    h1{
+        margin-top: 20px;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        display: none;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100%;
+        background-color: #222;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        padding-bottom: 0px;
+        border-radius: 0px;
+        gap: 15px;
+    }
+    
+    .display{
+        width: 100%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    #input_display{
+        width: 100%;
+        padding: 30px 20px;
+        text-align: right;
+        font-size: 50px;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+    
+    
+    .buttons{
+        width: 100%;
+        height: 55%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 15px;
+        margin-top: 0px;
+    }
+    
+    .buttons input{
+        padding: 20px;
+        outline: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 50%;
+        border: none;
+        background-color: #444;
+        color: white;
+        transition: background-color .3s ease;
+    }
+    
+    .buttons input:hover{
+        background-color: #666;
+    }
+    
+    #equal_to{
+        grid-row: span 2;
+        border-radius: 20px;
+        background-color: darkorange;
+    }
+    
+    #zero{
+        grid-column: span 2;
+        border-radius: 40px;
+    }
+    
+    #divide, #times, #plus, #minus{
+        background-color: darkorange;
+        transition: background-color .3s ease;
+    }
+    
+    #divide:hover, #times:hover, #plus:hover, #minus:hover, #equal_to:hover{
+        background-color: rgb(248, 182, 58);
+    }
+    
+    #clear, #delete{
+        background-color: #cccccca4;
+        transition: background-color .3s ease;
+    }
+    
+    #clear:hover, #delete:hover{
+        background-color: #cccccc;
+    }
+}
